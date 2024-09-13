@@ -3,6 +3,15 @@ const express = require('express')
 const app = express()
 const port = 4000
 
+let github = {
+    name: "Nikhil Aswal",
+    age: 20
+}
+
+app.get('/github/nikhilaswal03', (req, res) => {
+    res.json(github)
+})
+
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
